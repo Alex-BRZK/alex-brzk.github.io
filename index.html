@@ -9,51 +9,105 @@
       background-color: #f4f4f4;
       margin: 20px;
     }
+
     h1 {
       text-align: center;
       color: #333;
+      margin-bottom: 40px;
     }
+
+    .wishlist-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
     .wishlist-item {
       background-color: #fff;
-      border-radius: 8px;
+      border: 2px solid #ddd;
+      border-radius: 10px;
       padding: 15px;
-      margin-bottom: 20px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      width: 45%;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
-    .wishlist-item img {
-      width: 150px;
-      margin-right: 10px;
-      display: inline-block;
-      vertical-align: middle;
-      border-radius: 4px;
+
+    .wishlist-item h2 {
+      margin-top: 0;
+      font-size: 1.2em;
+      color: #444;
     }
+
+    .wishlist-images {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .wishlist-images img {
+      width: 180px;
+      height: auto;
+      border-radius: 6px;
+      object-fit: cover;
+    }
+
+    .wishlist-item p {
+      margin: 8px 0;
+    }
+
     .wishlist-item a {
       color: #007BFF;
       text-decoration: none;
     }
+
     .wishlist-item a:hover {
       text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .wishlist-item {
+        width: 100%;
+      }
+
+      .wishlist-images {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .wishlist-images img {
+        width: 100%;
+        max-width: 300px;
+      }
     }
   </style>
 </head>
 <body>
   <h1>🎁 Ma Liste d'Envies</h1>
 
-  <div class="wishlist-item">
-    <h2>T-shirt KAKA Milan AC n°22</h2>
-    <img src="https://medias.lequipe.fr/img-photo-jpg/kaka-est-de-retour-presse-sports/1500000000995879/0:0,1871:1247-1200-800-75/919f4.jpg" alt="T-shirt Milan AC KAKA n°22">
-    <img src="https://assets-eu-01.kc-usercontent.com/1293c890-579f-01b7-8480-902cca7de55e/f3de84a1-ebb6-4e06-97ec-0497e1d4bb3f/2022.11.24-RossoneriMondiali-Kaka-interna1.jpg" alt="KAKA avec le Milan AC">
-    <p>T-shirt de football à manches courtes, noir et rouge, du Milan AC à l'effigie de KAKA (n°22), taille XL.</p>
-    <p><a href="https://alex-brzk.github.io/index.html" target="_blank">Non disponible à l'achat, à rechercher d'occasion</a></p>
-  </div>
+  <div class="wishlist-container">
 
-  <div class="wishlist-item">
-    <h2>T-shirt Ghost</h2>
-    <img src="https://www.large.be/dw/image/v2/BBQV_PRD/on/demandware.static/-/Sites-master-emp/default/dwb5556595/images/3/4/1/2/341214a-emp.jpg?sfrm=png" alt="T-shirt Ghost design 1">
-    <img src="https://www.metalmonde.fr/images/produkty/125411_dse020.JPG" alt="T-shirt Ghost design 2">
-    <p>T-shirt Ghost taille XL. Il en existe plusieurs modèles, souvent disponibles d'occasion. À choisir selon le design préféré.</p>
-    <p><a href="https://alex-brzk.github.io/index.html" target="_blank">À rechercher sur Internet</a></p>
-  </div>
+    <div class="wishlist-item">
+      <h2>T-shirt KAKA Milan AC n°22</h2>
+      <div class="wishlist-images">
+        <img src="https://medias.lequipe.fr/img-photo-jpg/kaka-est-de-retour-presse-sports/1500000000995879/0:0,1871:1247-1200-800-75/919f4.jpg" alt="T-shirt Milan AC KAKA n°22">
+        <img src="https://assets-eu-01.kc-usercontent.com/1293c890-579f-01b7-8480-902cca7de55e/f3de84a1-ebb6-4e06-97ec-0497e1d4bb3f/2022.11.24-RossoneriMondiali-Kaka-interna1.jpg" alt="KAKA avec le Milan AC">
+      </div>
+      <p>T-shirt de football à manches courtes, noir et rouge, du Milan AC à l'effigie de KAKA (n°22), taille XL.</p>
+      <p>Il n'est plus créé depuis des années, donc le prix est dur à estimer mais cela reste un t-shirt.</p>
+      <p><a href="https://alex-brzk.github.io/index.html" target="_blank">Non disponible à l'achat, à rechercher d'occasion</a></p>
+    </div>
 
+    <div class="wishlist-item">
+      <h2>T-shirt Ghost</h2>
+      <div class="wishlist-images">
+        <img src="https://www.large.be/dw/image/v2/BBQV_PRD/on/demandware.static/-/Sites-master-emp/default/dwb5556595/images/3/4/1/2/341214a-emp.jpg?sfrm=png" alt="T-shirt Ghost design 1">
+        <img src="https://www.metalmonde.fr/images/produkty/125411_dse020.JPG" alt="T-shirt Ghost design 2">
+      </div>
+      <p>T-shirt Ghost taille XL. Il en existe plusieurs modèles, souvent disponibles d'occasion. À choisir selon le design préféré.</p>
+      <p>Ne vaut pas plus de 30 €, donc une bonne affaire serait 20€</p>
+      <p><a href="https://alex-brzk.github.io/index.html" target="_blank">À rechercher sur Internet</a></p>
+    </div>
+
+  </div>
 </body>
 </html>
